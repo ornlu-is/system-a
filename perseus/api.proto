@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package perseus;
+option go_package = "perseus/";
+
+// Perseus does some stuff
+service Perseus {
+    // Add adds stuff
+    rpc Add (AddReq) returns (AddResp) {}
+
+    // Delete deletes stuff
+    rpc Delete (DeleteReq) returns (DeleteResp) {}
+
+    // Get gets stuff
+    rpc Get (GetReq) returns (GetResp) {}
+}
+
+// AddReq does something
+message AddReq {
+    int32 id = 1; // id
+    string first_name = 2; // first name
+    string last_name = 3; // last name
+    int32 age = 4; // age
+}
+
+// AddResp does something
+message AddResp {}
+
+// DeleteReq does something
+message DeleteReq {
+    int32 id = 1; // id
+}
+
+// DeleteResp does something
+message DeleteResp {}
+
+// GetReq does something
+message GetReq {
+    int32 id = 1; // id
+}
+
+// GetResp does something
+message GetResp {
+    int32 id = 1; // id
+    string first_name = 2; // first name
+    string last_name = 3; // last name
+    int32 age = 4; // age
+}
